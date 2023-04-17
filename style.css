@@ -1,0 +1,443 @@
+/* membuat background hijau transparan */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(47, 196, 141, 0.2);
+    flex-basis: 100%;
+  }
+  
+  /* membuat navigasi menempel pada atas dan background hitam transparan */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #4be3a4;
+    backdrop-filter: blur(5px);
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav:hover {
+    background-color: #00bf6f;
+  }
+  
+  nav h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    /* flex-basis: 20%; */
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 10pt;
+    /* flex-basis: 100%; */
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #035633;
+  }
+  nav .menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* menampilkan menu navigasi pada layar besar */
+  nav .menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 10pt;
+  }
+  
+  nav .menu-list li {
+    margin: 0 10px;
+  }
+  
+  nav .menu-list a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+  
+  nav .menu-list a:hover {
+    background-color: #00bf6f;
+  }
+  
+  /* menampilkan menu navigasi dalam bentuk dropdown pada layar kecil */
+  nav .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav .menu-dropdown li {
+    margin: 10px 0;
+  }
+  
+  nav .menu-dropdown a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+  
+  nav .menu-dropdown a:hover {
+    background-color: #00bf6f;
+  }
+  
+  /* menampilkan menu navigasi pada layar kecil */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav .menu-toggle {
+      display: block;
+    }
+  
+    nav .menu-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    nav .menu-list li {
+      margin: 10px 0;
+    }
+  
+    nav .menu-dropdown {
+      display: block;
+    }
+  }
+  
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: url(https://images.unsplash.com/photo-1542791184-9848d4e6d80d);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .banner h2 {
+    font-size: 48px;
+    color: #00bf6f;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  /* membuat tombol join us */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(64, 159, 198);
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #88c7ef;
+    color: #000;
+  }
+  
+  
+    .about {
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    .about img {
+    flex-basis: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .about h2 {
+    font-size: 48px;
+    color: #00bf6f;
+    margin-bottom: 20px;
+    }
+    
+    .about p {
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    
+    /* membuat footer */
+    footer {
+        background-color: #333333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        flex-wrap: wrap;
+      }
+      
+      .footer-logo {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      
+      .footer-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+      }
+      
+      .footer-nav li {
+        margin: 0 10px;
+      }
+      
+      .footer-nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .footer-nav a:hover {
+        color: #00bf6f;
+      }
+      
+      .footer-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+      }
+      
+      .footer-social li {
+        margin: 0 10px;
+      }
+      
+      .footer-social a {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .footer-social a:hover {
+        color: #00bf6f;
+      }
+    
+      @media screen and (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        
+        nav li {
+          margin: 10px 0;
+        }
+        
+        .banner {
+          height: 300px;
+        }
+        
+        .banner h2 {
+          font-size: 36px;
+          margin-bottom: 10px;
+        }
+        
+        .about {
+          flex-direction: column;
+          padding: 50px 20px;
+          text-align: center;
+        }
+        
+        .about img {
+          margin-bottom: 20px;
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+        }
+        
+        .about h2 {
+          font-size: 36px;
+          margin-bottom: 10px;
+        }
+        
+        .text-container {
+          margin-bottom: 30px;
+        }
+      }
+      
+      /* Membuat gambar banner responsif */
+      .banner {
+        background-image: url(https://images.unsplash.com/photo-1542791184-9848d4e6d80d);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        width: 100%;
+      }
+      
+      @media screen and (max-width: 576px) {
+        .banner {
+          background-image: url(https://images.unsplash.com/photo-1542791184-9848d4e6d80d?w=576);
+        }
+      }
+      
+      @media screen and (max-width: 320px) {
+        .banner {
+          background-image: url(https://images.unsplash.com/photo-1542791184-9848d4e6d80d?w=320);
+        }
+      } 
+
+      .card {
+        position: relative;
+        width: 220px;
+        height: 320px;
+        background: mediumturquoise;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 15px;
+        cursor: pointer;
+        margin: 0 10px;
+      }
+      
+      @media only screen and (max-width: 768px) {
+        .card {
+          width: 150px;
+          height: 250px;
+          font-size: 20px;
+        }
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .card {
+          width: 120px;
+          height: 200px;
+          font-size: 15px;
+        }
+      }
+      
+      .card::before,
+      .card::after {
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: lightblue;
+        transition: all 5s;
+      }
+      
+      .card::before {
+        top: 0;
+        right: 0;
+        border-radius: 0 15px 0 100%;
+      }
+      
+      .card::after {
+        bottom: 0;
+        left: 0;
+        border-radius: 0 100% 0 15px;
+      }
+      
+      .card:hover::before,
+      .card:hover:after {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        transition: all 1s;
+      }
+      
+      .card:hover:after {
+        content: "HELLO";
+      }
+      
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 200px;
+      }
